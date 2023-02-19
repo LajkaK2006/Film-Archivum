@@ -5,6 +5,9 @@
     <title>Film-Archívum</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="css/mainmenu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -76,8 +79,88 @@
     </section>
     <section class="hamarosan" id="hamarosan">
       <h2 class="heading">Hamarosan</h2>
-      <div class="coming-container">
-        <!---Slider--->
+      <div class="coming-container swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+
+          <div class="swiper-slide box">
+            <div class="box-img">
+            <img src="pic/film5.jpg" alt="">
+            </div>
+            <h3>Mindent bele fiúk</h3>
+            <span>122 perc | Akció</span>
+          </div>
+        </div>
       </div>
     </section>
   <section class="hirlevel" id="hirlevel">
@@ -87,8 +170,56 @@
       <input type="submit" value="Feliratkozás" class="button">
     </form>
   </section>
+  <section class="footer">
+    <a href="mainmenu.html" class="logo"><img src="pic/logo.png">Film Archívum</a>
+    <div class="elerhetoseg">
+      <a href=""><i class='bx bxl-facebook-square'></i></a>
+      <a href=""><i class='bx bxl-instagram' ></i></a>
+      <a href=""><i class='bx bxl-youtube'></i></a>
+    </div>
+  </section>
+  <div class="copyright">
+    <p>&#169; Film-Archívum | Minden jog fenntartva.</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
+  var swiper = new Swiper(".coming-container", {
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 55000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        568: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        968: {
+          slidesPerView: 5,
+        },
+      },
+    });
 
+
+    let header = document.querySelector('header');
+    let menu = document.querySelector('#menu-ikon');
+    let navbar = document.querySelectorAll('.navbar');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow', window.scrollY > 0);
+    });
+
+    menu.onclick = () => {
+      menu.classList.toggle('bx-x');
+      navbar.classList.toggle('active');
+    };
 </script>
 </body>
 </html>

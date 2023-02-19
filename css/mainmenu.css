@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -36,6 +37,18 @@ header{
     padding: 20px 100px;
     z-index: 1000;
     transition: 0.5s;
+}
+
+header.shadow{
+    background: white;
+}
+
+header.shadow .navbar a{
+    color: black;
+}
+
+header.shadow .logo{
+    color: black;
 }
 
 .logo{
@@ -131,7 +144,7 @@ saction{
 
 .fooldal-text{
     color: white;
-    z-index: 1000;
+    z-index: 1;
     padding: 0px 150px;
 }
 
@@ -139,6 +152,7 @@ saction{
     color: white;
     font-weight: 500;
     text-transform: uppercase;
+    font-family: 'Carter One', cursive;
 }
 
 .fooldal-text h1{
@@ -146,6 +160,7 @@ saction{
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    font-family: 'Carter One', cursive;
 }
 
 .filmek{
@@ -154,7 +169,7 @@ saction{
     margin: auto;
     font-size: 1.2rem;
     font-weight: 500;
-    border-bottom: 1px solid #C0C0C0;
+    margin-top: 2rem;
 }
 
 .film-container{
@@ -164,6 +179,7 @@ saction{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .box .box-img{
@@ -184,6 +200,11 @@ saction{
 
 .heading{
     text-transform: uppercase;
+    border-bottom: 1px solid #a79b8b;
+    margin: auto;
+    font-weight: 500;
+    max-width: 970px;
+    font-size: 1.4rem;
 }
 
 .box h3{
@@ -244,6 +265,67 @@ saction{
     background: #a79b8b;
 }
 
+.coming-container{
+    display: grid;
+    gap: 1rem;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.coming-container .box-img img:hover{
+    transform: translateY(0);
+}
+
+.coming-container .box{
+    width: 100px;
+}
+
+.hamarosan{
+    color: white;
+    max-width: 970px;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.footer{
+    max-width: 970px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.elerhetoseg{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.elerhetoseg .bx{
+    color: black;
+    background: white;
+    padding: 2px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.elerhetoseg .bx:hover{
+    background: black;
+    color: white;
+    transition: 0.2s all linear;
+}
+
+.copyright{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 @media(max-width:1080px){
     .fooldal-text{
         padding: 0;
@@ -254,8 +336,11 @@ saction{
     .header{
         padding: 18px 4%;
     }
-    section{
+    .fooldal{
         padding: 0;
+    }
+    section{
+        padding: 50px 4%;
     }
     .fooldal-text h1{
         font-size: 3rem;
@@ -265,17 +350,21 @@ saction{
     }
 }
 
-@media(max-width:940px){
+@media(max-width:780px){
     .header{
         padding: 12px 4%;
     }
     #menu-ikon{
         display: initial;
         color: white;
+        margin: 0 20px;
+    }
+    header.shadow #menu-ikon{
+        color: black;
     }
     .navbar{
         position: absolute;
-        top: 100%;
+        top: -570px;
         left: 0;
         right: 0;
         display: flex;
@@ -295,9 +384,60 @@ saction{
     }
     .navbar a:hover{
         color: #a79b8b;
-        border-bottom: #C0C0C0;
+        border-bottom: 2px solid #C0C0C0;
+    }
+    .navbar .active{
+        top: 100%;
     }
     .fooldal-text{
-        margin-top: 7rem;
+        font-size: 2.4rem;
+    }
+    .button{
+        padding: 0.6rem 1.2rem;
+    }
+    .film-container{
+        grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    }
+}
+
+@media(max-width:472px){
+    .hirlevel form .email{
+        width: auto;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .header{
+        padding: 10px 2%;
+    }
+    #menu-ikon{
+        display: initial;
+        color: white;
+        margin: 0 20px;
+    }
+}
+
+@media(max-width:370px){
+    header{
+        padding: 6px 2%;
+    }
+    .fooldal-text{
+        font-size: 1.7rem;
+    }
+    .bx{
+        padding: 7px;
+    }
+    .filmek-conatiner{
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    }
+    .box .box-img{
+        height: 120px;
+    }
+    #menu-ikon{
+        display: initial;
+        color: white;
+        margin: 0 20px;
     }
 }
