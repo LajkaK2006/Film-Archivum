@@ -333,8 +333,8 @@ saction{
 }
 
 @media(max-width:991px){
-    .header{
-        padding: 18px 4%;
+    header{
+        padding: 20px 10px;
     }
     .fooldal{
         padding: 0;
@@ -351,8 +351,8 @@ saction{
 }
 
 @media(max-width:780px){
-    .header{
-        padding: 12px 4%;
+    header{
+        padding: 20px 10px;
     }
     #menu-ikon{
         display: initial;
@@ -409,8 +409,8 @@ saction{
         align-items: center;
         row-gap: 1rem;
     }
-    .header{
-        padding: 10px 2%;
+    header{
+        padding: 20px 10px;
     }
     #menu-ikon{
         display: initial;
@@ -421,7 +421,7 @@ saction{
 
 @media(max-width:370px){
     header{
-        padding: 6px 2%;
+        padding: 20px 10px;
     }
     .fooldal-text{
         font-size: 1.7rem;
