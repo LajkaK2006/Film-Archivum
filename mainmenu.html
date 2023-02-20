@@ -83,82 +83,74 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film8.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Szuperhekusok</h3>
+            <span>155 perc | Krími</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film6.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Bunyó Karácsonyig</h3>
+            <span>142 perc | Western</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film9.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Különben dühbe jövünk</h3>
+            <span>132 perc | Filmvígjáték</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film7.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>És megint dühbe jövünk</h3>
+            <span>143 perc | Bűnügyi</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film10.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Nincs kettő négy nélkül</h3>
+            <span>154 perc | Vígjáték</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film11.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Bűnvadászok</h3>
+            <span>143 perc | Bűnügyi</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film12.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Akik Csizmában Halnak Meg</h3>
+            <span>141 perc | Western</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film13.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>A Kalózok háborúja</h3>
+            <span>95 perc | Kaland</span>
           </div>
 
           <div class="swiper-slide box">
             <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
+            <img src="pic/film14.jpg" alt="">
             </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
-          </div>
-
-          <div class="swiper-slide box">
-            <div class="box-img">
-            <img src="pic/film5.jpg" alt="">
-            </div>
-            <h3>Mindent bele fiúk</h3>
-            <span>122 perc | Akció</span>
+            <h3>Isten megbocsát, én nem</h3>
+            <span>155 perc | Western</span>
           </div>
         </div>
       </div>
@@ -210,7 +202,7 @@
 
     let header = document.querySelector('header');
     let menu = document.querySelector('#menu-ikon');
-    let navbar = document.querySelectorAll('.navbar');
+    let navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', () => {
       header.classList.toggle('shadow', window.scrollY > 0);
@@ -219,6 +211,10 @@
     menu.onclick = () => {
       menu.classList.toggle('bx-x');
       navbar.classList.toggle('active');
+    };
+    window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
     };
 </script>
 </body>
