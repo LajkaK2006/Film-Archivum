@@ -250,6 +250,8 @@ saction{
 .email{
     width: 280px;
     margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .hirlevel form input::placeholder{
@@ -325,6 +327,9 @@ saction{
     padding: 20px;
     text-align: center;
 }
+
+
+
 
 @media(max-width:1080px){
     .fooldal-text{
@@ -441,3 +446,4 @@ saction{
         margin: 0 20px;
     }
 }
+
