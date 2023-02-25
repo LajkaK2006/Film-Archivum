@@ -137,7 +137,6 @@ img{
     max-width: 1080px;
     margin: auto;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4));
 }
 
 .resz-text{
@@ -159,6 +158,7 @@ img{
 .resz-text h2{
     font-size: 1.5rem;
     font-weight: 600;
+    font-family: 'Carter One', cursive;
 }
 
 .ertek{
@@ -257,20 +257,6 @@ img{
     margin: 1.5rem 0 1.5rem 0;
 }
 
-.szereplok{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,150px));
-    gap: 1rem;
-}
-
-.szinesz-img{
-    width: 150px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-}
-
 .link{
     margin-top: 1rem;
     font-size: 1.4rem;
@@ -278,6 +264,63 @@ img{
     text-transform: uppercase;
     border-bottom: 1px solid #a79b8b;
     color: #a79b8b;
+
+}
+
+.card{
+    background-color: black;
+    min-width: 200px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 20%;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px;
+    box-shadow: rgba(255, 255, 255, 0) 0px 50px 100px -20px, rgba(255, 255, 255, 0.300) 0px 30px 60px -30px, rgba(255, 255, 255, 0.199) 0px -2px 6px 0px inset;
+    transition: 1s;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.szereplok-container{
+    transition: 1s;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 45px;
+    margin-bottom: 70px;
+}
+
+.card img{
+    height: 150px;
+    width: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #a79b8b;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.name{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    margin-top: 5px;
 }
 
 .copyright{
@@ -313,7 +356,9 @@ img{
     color: white;
     transition: 0.2s all linear;
 }
-.link{margin-bottom: 1.5rem;}
+.link{
+    margin-bottom: 1.5rem;
+}
 
 .iframe-div{
     max-width: 800px;
@@ -331,4 +376,117 @@ img{
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+@media(max-width:1060px){
+    .resz-img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .film-leiras{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 20px 10px;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media(max-width:780px){
+    header{
+        padding: 20px 10px;
+    }
+    #menu-ikon{
+        display: initial;
+        color: black;
+        margin: 0 20px;
+    }
+    header.shadow #menu-ikon{
+        color: black;
+    }
+    .navbar{
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.2s all linear;
+        text-align: center;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%); 
+    }
+    .navbar a{
+        color: black;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar a:hover{
+        color: #a79b8b;
+        border-bottom: 2px solid #C0C0C0;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+}
+
+@media(max-width:540px){
+    .card{
+        min-width: 150px;
+        margin-bottom: 0;
+        flex-basis: 0%;
+    }
+    .szereplok-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .card img{
+        height: 110px;
+        width: 110px;
+    }
+    .name{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:472px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    header{
+        padding: 20px 10px;
+    }
+    #menu-ikon{
+        display: initial;
+        color: black;
+        margin: 0 20px;
+    }
+    .hamarosan{
+        margin:0;
+    }
+}
+
+@media(max-width:370px){
+    header{
+        padding: 20px 10px;
+    }
+    .bx{
+        padding: 7px;
+    }
+    #menu-ikon{
+        display: initial;
+        color: black;
+        margin: 0 20px;
+    }
 }
